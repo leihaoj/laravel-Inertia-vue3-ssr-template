@@ -6,9 +6,9 @@ export default defineConfig({
     plugins: [
         vue(),
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: ['resources/js/app.js'],
             // ssr: 'resources/js/ssr.js',
-            refresh: true,
+            refresh: true, // 保存时刷新
         }),
     ],
     server: {

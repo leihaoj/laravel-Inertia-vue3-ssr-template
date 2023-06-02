@@ -1,6 +1,8 @@
 <template>
     <Head :title="info.title"/>
     <h1>{{ info.title }}</h1>
+    {{ num }}
+    <button @click="onNumChange">点击</button>
     <p>Hello, welcome to your first Inertia app!</p>
 </template>
 
@@ -12,6 +14,11 @@ import {ref} from 'vue';
 defineProps({info: Object})
 
 const dialog_visible = ref<boolean>(false)
+const num = ref(1)
+
+const onNumChange = () => {
+    num.value += 1;
+}
 </script>
 
 
