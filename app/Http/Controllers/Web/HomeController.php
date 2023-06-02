@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function show()
     {
         # 自定义页面头部
-        $title = '首页';
+        $title = '首页测试';
         return Inertia::render('Home/index', [
             'info' => [
                 'title' => $title,
