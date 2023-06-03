@@ -1,6 +1,7 @@
 import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
+import ViteCompression from 'vite-plugin-compression'
 
 export default defineConfig({
     plugins: [
@@ -10,6 +11,7 @@ export default defineConfig({
             // ssr: 'resources/js/ssr.js',
             refresh: true, // 保存时刷新
         }),
+        ViteCompression(),
     ],
     server: {
         port: 3008,
