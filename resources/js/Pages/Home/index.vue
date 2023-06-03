@@ -3,7 +3,7 @@
     <h1>{{ info.title }}</h1>
     {{ num }}
     <button @click="onNumChange">点击</button>
-    <p>Hello, welcome to your first Inertia app!</p>
+    <p>新的内容是否加载</p>
 </template>
 
 
