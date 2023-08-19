@@ -1,0 +1,1 @@
+import{d as n,u as r,r as e,c,a as u,b as l,e as p,t as i,f as t,F as _,o as f,Z as m}from"./app-394bbaaa.js";const d=t("h1",null,"我是首页",-1),g=n({__name:"index",props:{info:Object},setup(h){const a=r();e(!1);const o=e(1),s=()=>{a.push({path:"/live"})};return(x,N)=>(f(),c(_,null,[u(l(m)),d,p(" "+i(o.value)+" ",1),t("button",{onClick:s},"跳转到live页面")],64))}});export{g as default};

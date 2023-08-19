@@ -1,7 +1,13 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+  createMemoryHistory,
+  RouteRecordRaw
+} from "vue-router";
 import routerConfig from "./tool";
 
-const routerList = [
+const routerList: Array<RouteRecordRaw> = [
   {
     path: routerConfig.home.path,
     name: routerConfig.home.name,
@@ -16,12 +22,16 @@ const routerList = [
   }
 ];
 
-// 存放固定的路由
-const defaultRouterList: Array<RouteRecordRaw> = [...routerList];
+const getRouterMode = () => {
+  if (typeof window === "undefined") {
+    return createMemoryHistory();
+  }
+  return createWebHistory();
+};
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes: defaultRouterList,
+  history: getRouterMode(),
+  routes: routerList,
   scrollBehavior() {
     return {
       el: "#app",
@@ -30,5 +40,4 @@ const router = createRouter({
     };
   }
 });
-
 export default router;

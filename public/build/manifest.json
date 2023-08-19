@@ -7,8 +7,28 @@
     "css": [
       "assets/app-7181b86b.css"
     ],
-    "file": "assets/app-eb24035e.js",
+    "dynamicImports": [
+      "resources/js/pages/home/index.vue",
+      "resources/js/pages/liveManagement/index.vue"
+    ],
+    "file": "assets/app-394bbaaa.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/pages/home/index.vue": {
+    "file": "assets/index-52a9d937.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/pages/home/index.vue"
+  },
+  "resources/js/pages/liveManagement/index.vue": {
+    "file": "assets/index-5a8eea58.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/pages/liveManagement/index.vue"
   }
 }

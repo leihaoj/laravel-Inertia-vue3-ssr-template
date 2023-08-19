@@ -12,8 +12,6 @@ import { ref } from "vue";
 
 const props = defineProps({ info: Object });
 
-console.log(props.info);
-
 const dialog_visible = ref<boolean>(false);
 const num = ref(1);
 

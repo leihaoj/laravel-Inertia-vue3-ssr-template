@@ -9,6 +9,7 @@
 import { Head } from "@inertiajs/vue3";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { slashStart } from "@/utils/tool";
 
 const router = useRouter();
 const props = defineProps({ info: Object });
