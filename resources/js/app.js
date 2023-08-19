@@ -5,8 +5,8 @@ import '../css/app.css'
 createInertiaApp({
     id: 'app',
     resolve: name => {
-        const pages = import.meta.glob('./Pages/**/*.vue', {eager: true})
-        return pages[`./Pages/${name}.vue`]
+        const pages = import.meta.glob('./pages/**/*.vue', {eager: true})
+        return pages[`./pages/${name}.vue`]
     },
     setup({el, App, props, plugin}) {
         // const app = createSSRApp({render: () => h(App, props)});

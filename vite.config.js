@@ -1,11 +1,13 @@
 import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
-import ViteCompression from 'vite-plugin-compression'
+import ViteCompression from 'vite-plugin-compression';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 export default defineConfig({
     plugins: [
         vue(),
+        vueJsx(),
         laravel({
             input: ['resources/js/app.js'],
             // ssr: 'resources/js/ssr.js',
