@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="le-layout">
     <Head :title="info.title"></Head>
+    <Header></Header>
     {{ label }}
     <button @click="changeStatus">点击修改状态</button>
     <router-view></router-view>
@@ -8,8 +9,9 @@
 </template>
 
 <script lang="ts" setup>
-import { Head } from "@inertiajs/vue3";
 import { ref } from "vue";
+import { Head } from "@inertiajs/vue3";
+import Header from "./components/header";
 import { useRoute, useRouter } from "vue-router";
 import { slashStart, windowExist } from "@/utils/tool";
 

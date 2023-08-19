@@ -11,7 +11,7 @@ export default defineConfig({
     vueJsx(),
     laravel({
       input: ["resources/js/app.js"],
-      ssr: "resources/js/ssr.js",
+      // ssr: "resources/js/ssr.js",
       refresh: true // 保存时刷新
     }),
     ViteCompression()
