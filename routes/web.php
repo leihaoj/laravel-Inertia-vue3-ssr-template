@@ -15,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::group([
     'namespace' => '\App\Http\Controllers\Web',
 ], function () {
-    Route::get('/', 'HomeController@show')->name('home.index');
+//    Route::get('/', 'HomeController@show')->name('home.index');
+    Route::get('/{any}', 'HomeController@show')->where('any', '.*')->name('home.index');;
 });
+
