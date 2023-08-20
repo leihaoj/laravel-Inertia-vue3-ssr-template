@@ -8,5 +8,5 @@ export default defineComponent({
         <div class="header-log">111</div>
       </header>
     );
-  }
+  },
 });
