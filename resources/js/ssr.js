@@ -24,8 +24,6 @@ createServer((page) =>
       try {
         const { info } = props.initialPage.props;
         const currentPath = router.currentRoute.value.path;
-        console.log(info.path, "info.path");
-        console.log(currentPath, "currentPath");
         if (info && info.path && currentPath) {
           await router.replace({
             path: info.path,
