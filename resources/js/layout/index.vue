@@ -1,37 +1,39 @@
 <template>
   <div class="le-layout">
     <Head :title="info.title"></Head>
-    <Header></Header>
-    {{ label }}
-    <button @click="changeStatus">点击修改状态</button>
-    <router-view></router-view>
+    <Navigation></Navigation>
+    <div class="le-content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
 import { Head } from "@inertiajs/vue3";
-import Header from "./components/header";
+import Navigation from "./components/navigation";
 import { useRoute, useRouter } from "vue-router";
 import { slashStart, windowExist } from "@/utils/tool";
 
 const props = defineProps({ info: Object });
 const router = useRouter();
 const route = useRoute();
-const label = ref("我是header组件");
 
 if (router && router.push && props.info?.path) {
   let path = slashStart(props.info.path);
   if (path != route.path) {
     router.replace({
-      path: path
+      path: path,
     });
   }
 }
-
-const changeStatus = () => {
-  label.value = "修改后header";
-};
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+.le-layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .le-content {
+  }
+}
+</style>

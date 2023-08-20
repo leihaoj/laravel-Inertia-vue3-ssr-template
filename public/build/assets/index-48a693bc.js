@@ -1,0 +1,1 @@
+import{d as o,r as a,c as s,a as c,b as r,e as l,t as u,f as e,F as _,o as i,Z as p}from"./app-84961aa7.js";const d=e("h1",null,"我是live页面",-1),f=e("p",null,"新的内容是否加载",-1),b=o({__name:"index",props:{info:Object},setup(m){a(!1);const t=a(1),n=()=>{t.value+=1};return(h,x)=>(i(),s(_,null,[c(r(p)),d,l(" "+u(t.value)+" ",1),e("button",{onClick:n},"点击"),f],64))}});export{b as default};

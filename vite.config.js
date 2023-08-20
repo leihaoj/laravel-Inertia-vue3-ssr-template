@@ -11,19 +11,27 @@ export default defineConfig({
     vueJsx(),
     laravel({
       input: ["resources/js/app.js"],
-      // ssr: "resources/js/ssr.js",
-      refresh: true // 保存时刷新
+      ssr: "resources/js/ssr.js",
+      refresh: true, // 保存时刷新
     }),
-    ViteCompression()
+    ViteCompression(),
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./resources/js")
-    }
+      "@": path.resolve(__dirname, "./resources/js"),
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        charset: false,
+        additionalData: '@import "./resources/js/style/var.less";',
+      },
+    },
   },
   server: {
     port: 3008,
     host: "127.0.0.1",
-    proxy: {}
-  }
+    proxy: {},
+  },
 });

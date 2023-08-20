@@ -1,4 +1,4 @@
-// prettier 插件注释
+// prettier 插件注释  filename .prettierrc
 module.exports = {
   printWidth: 80, // 每行的字符限制
   tabWidth: 2, // 每个制表符占用2个空格的宽度
